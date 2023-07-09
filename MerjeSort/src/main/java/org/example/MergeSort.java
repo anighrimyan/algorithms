@@ -1,5 +1,6 @@
 /**
  * The MergeSort class implements the merge sort algorithm for sorting an array of integers.
+ * Time complexity is O(nlogn).
  */
 public class MergeSort {
     /**
