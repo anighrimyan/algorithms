@@ -33,9 +33,9 @@ public class MergeSort {
         int rightSize = right - mean;
         int[] leftArr = new int[leftSize];
         int[] rightArr = new int[rightSize];
-        for (int i = 0; i < leftSize; i++)
+        for (int i = 0; i < leftSize; ++i)
             leftArr[i] = items[left + i];
-        for (int j = 0; j < rightSize; j++)
+        for (int j = 0; j < rightSize; ++j)
             rightArr[j] = items[mean + 1 + j];
         int i = 0;
         int j = 0;
@@ -43,23 +43,17 @@ public class MergeSort {
         while(i < leftSize && j < rightSize)
         {
             if (leftArr[i] <= rightArr[j]) {
-                items[k] = leftArr[i];
-                i++;
+                items[k] = leftArr[i++];
             } else {
-                items[k] = rightArr[j];
-                j++;
+                items[k] = rightArr[j++];
             }
             k++;
         }
         while (i < leftSize) {
-            items[k] = leftArr[i];
-            i++;
-            k++;
+            items[k++] = leftArr[i++];
         }
         while (j < rightSize) {
-            items[k] = rightArr[j];
-            j++;
-            k++;
+            items[k++] = rightArr[j++];
         }
     }
 
